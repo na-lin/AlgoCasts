@@ -8,17 +8,6 @@
 //   reverse('') === ''
 //   reverse('a') === 'a'
 
-// My solution:
-//time:  O(N^2) -> O(N)
-//space: O(N)
-// function reverse(str) {
-//   let output = [];
-//   for (let i = str.length - 1; i >= 0; i--) {
-//     output.push(str[i]);
-//   }
-//   return output.join("");
-// }
-
 // Solution 1: which utlized the array.reverse()
 // function reverse(str) {
 //   return str.split("").reverse().join("");
@@ -41,3 +30,14 @@ function reverse(str) {
 }
 
 module.exports = reverse;
+
+// My solution:
+//time:  O(N^2) -> O(N)
+//space: O(N)
+// function reverse(str) {
+//   let output = [];
+//   for (let i = str.length - 1; i >= 0; i--) {
+//     output.push(str[i]);
+//   }
+//   return output.join("");
+// }
