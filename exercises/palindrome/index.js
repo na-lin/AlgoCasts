@@ -6,7 +6,83 @@
 // --- Examples:
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
+// edge case:
+//  "" -> true
+//  "a" -> true
 
-function palindrome(str) {}
+//My solution
+// 1. way to reverse the input string
+// 2. compare the input string with the reversed one
+// return true/false
+// function palindrome(str) {
+//   let reversed = str.split("").reverse(); // O(N)TS
+
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i] !== reversed[i]) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+
+// Solution 1:
+// function palindrome(str) {
+//   const reversed = str.split("").reverse().join("");
+//   return str === reversed;
+// }
+
+// solution 2 : array.every()
+// O(N)time, O(1)space
+//
+// function palindrome(str) {
+//   let i = 0;
+//   let j = str.length - 1;
+
+//   while (i < j) {
+//     if (str[i] !== str[j]) {
+//       return false;
+//     }
+//     i++;
+//     j--;
+//   }
+//   return true;
+// }
+
+function palindrome(str) {
+  return str.split("").every((char, i) => {
+    return char === str[str.length - 1 - i];
+  });
+}
 
 module.exports = palindrome;
+//My solution
+// 1. way to reverse the input string
+// 2. compare the input string with the reversed one
+// return true/false
+
+// O(N)TS
+// function palindrome(str) {
+//   let reversed = str.split("").reverse(); // O(N)TS
+
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i] !== reversed[i]) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+
+// O(N)time, O(1)space
+// function palindrome(str) {
+//   let i = 0;
+//   let j = str.length - 1;
+
+//   while (i < j) {
+//     if (str[i] !== str[j]) {
+//       return false;
+//     }
+//     i++;
+//     j--;
+//   }
+//   return true;
+// }
