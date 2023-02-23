@@ -31,6 +31,8 @@ module.exports = palindrome;
 // return true/false
 
 // O(N)TS
+// Use a for loop -> time
+// variable to store reversed string -> space
 // function palindrome(str) {
 //   let reversed = str.split("").reverse(); // O(N)TS
 
